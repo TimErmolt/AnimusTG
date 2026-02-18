@@ -24,19 +24,19 @@
 	icon = 'modular_erebus/modules/onyx_species/icons/organs.dmi'
 	worn_icon = 'modular_erebus/modules/onyx_species/icons/tajara/tajara_ears.dmi'
 	icon_state = "tajara_ears"
-	sprite_accessory_override = /datum/sprite_accessory/ears/tajara
 
-	dna_block = /datum/dna_block/feature/accessory/ears
+	dna_block = /datum/dna_block/feature/accessory/ears_tajara
 
-	bodypart_overlay = /datum/bodypart_overlay/mutant/tajara_ears
+	bodypart_overlay = /datum/bodypart_overlay/mutant/cat_ears/tajara_ears
 
-/datum/bodypart_overlay/mutant/tajara_ears
+// Why does this randomly and inexplicably work?
+// Why did 4 hours of my suffering get fixed just by making it a subtype of `cat_ears`?
+// I have fuck all clue, mate. But at this point I'll just take it.
+/datum/bodypart_overlay/mutant/cat_ears/tajara_ears
 	feature_key = FEATURE_EARS_TAJARA
+	sprite_datum = /datum/sprite_accessory/ears/tajara
 	color_source = ORGAN_COLOR_HAIR
 	dyable = TRUE
-
-/datum/bodypart_overlay/mutant/tajara_ears/can_draw_on_bodypart(obj/item/bodypart/bodypart_owner)
-	return !(bodypart_owner.owner?.obscured_slots & HIDEHAIR)
 
 /obj/item/organ/ears/tajara/cybernetic
 	name = "basic cybernetic tajara ears"
@@ -44,7 +44,7 @@
 	icon_state = "ears-c-cat"
 	desc = "A basic cybernetic organ designed to mimic the operation of ears."
 	damage_multiplier = 1.5
-	bodypart_overlay = /datum/bodypart_overlay/mutant/tajara_ears/cybernetic
+	bodypart_overlay = /datum/bodypart_overlay/mutant/cat_ears/tajara_ears/cybernetic
 	sprite_accessory_override = /datum/sprite_accessory/ears/cat/cybernetic
 	organ_flags = ORGAN_ROBOTIC
 	failing_desc = "seems to be broken."
@@ -55,8 +55,7 @@
 	desc = "Cybernetic tajara ears, still less durable than human ears."
 	damage_multiplier = 1
 
-/datum/bodypart_overlay/mutant/tajara_ears/cybernetic
-	feature_key = FEATURE_EARS_TAJARA
+/datum/bodypart_overlay/mutant/cat_ears/tajara_ears/cybernetic
 	color_source = null
 	dyable = FALSE
 
@@ -107,8 +106,8 @@
 /obj/item/organ/tail/tajara
 	name = "tajara tail"
 
-	sprite_accessory_override = /datum/sprite_accessory/tails/tajara
-	bodypart_overlay = /datum/bodypart_overlay/mutant/tail/cat
+	dna_block = /datum/dna_block/feature/accessory/tail_tajara
+	bodypart_overlay = /datum/bodypart_overlay/mutant/tail/tajara
 	restyle_flags = EXTERNAL_RESTYLE_FLESH
 
 	wag_flags = WAG_ABLE
@@ -116,6 +115,6 @@
 /obj/item/organ/tail/tajara/get_butt_sprite()
 	return icon('icons/mob/butts.dmi', BUTT_SPRITE_CAT)
 
-///Bodypart overlay
 /datum/bodypart_overlay/mutant/tail/tajara
 	feature_key = FEATURE_TAIL_TAJARA
+	sprite_datum = /datum/sprite_accessory/tails/tajara

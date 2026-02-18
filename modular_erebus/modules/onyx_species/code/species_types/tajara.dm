@@ -17,7 +17,7 @@
 	// Mutant organs are temp; will replace with proper tajara variants later
 
 	mutant_organs = list(
-		/obj/item/organ/tail/tajara = "Plain",
+		/obj/item/organ/tail/tajara = "Tajara Tail",
 	)
 
 	mutantbrain = /obj/item/organ/brain/tajara
@@ -41,8 +41,7 @@
 /datum/species/tajara/prepare_human_for_preview(mob/living/carbon/human/tajara)
 	tajara.dna.features[FEATURE_MUTANT_COLOR] = "#707070"
 	tajara.set_eye_color(COLOR_GREEN)
-	//tajara.set_haircolor("#bb9966", update = FALSE) // brown
-	//tajara.set_hairstyle("Business Hair", update = TRUE)
+	tajara.set_haircolor("#707070", update = FALSE)
 	tajara.update_body(is_creating = TRUE)
 
 /datum/species/tajara/get_scream_sound(mob/living/carbon/human/tajara)
@@ -159,13 +158,21 @@
 /datum/species/tajara/create_pref_unique_perks()
 	var/list/to_add = list()
 
-	to_add += list(list(
+	to_add += list(
+		list(
 		SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
 		SPECIES_PERK_ICON = "thermometer-empty",
 		SPECIES_PERK_NAME = "Thick Fur",
-		SPECIES_PERK_DESC = "The Tajaran's fur grants them higher tolerance for low temperatures, but lower \
+		SPECIES_PERK_DESC = "Tajaran's fur grants them higher tolerance for low temperatures, but lower \
 			tolerance for high temperatures, and especially fires. Moreover, tajaran typically prefer looser \
 			and lighter clothing to stay comfortable in the station's, from their perspective, warm climate.",
-	))
+		),
+		list(
+		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
+		SPECIES_PERK_ICON = FA_ICON_PERSON_FALLING,
+		SPECIES_PERK_NAME = "Catlike Grace",
+		SPECIES_PERK_DESC = "Tajaran have catlike instincts allowing them to land upright on their feet.  \
+			Instead of being knocked down from falling, you only receive a short slowdown.",
+		))
 
 	return to_add
