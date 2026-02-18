@@ -2,7 +2,7 @@
 
 **MODULE ID:** onyx_species
 
-**Pull Request:** <!-- Ссылка на PR, вводящий модуль в билд. При значительном его изменении в последующих ПРах, ссылки на них тоже стоит сюда добавить. -->
+**Pull Request:** https://github.com/ChaoticOnyx/AnimusTG/pull/5
 
 ### Описание:
 
@@ -12,7 +12,7 @@
 
 ### Изменения файлов или проков TG:
 
-N/A
+`/datum/controller/subsystem/accessories/setup_lists()` -- в конец прока присоединены инициализации спрайтовых аксессуаров для новых рас.
 
 ### Дефайны:
 
@@ -20,6 +20,12 @@ SPECIES_TAJARA -- "tajara"
 SPECIES_SKRELL -- "skrell"
 SPECIES_VOX -- "vox"
 
+FEATURE_EARS_TAJARA -- "ears_tajara"
+FEATURE_TAIL_TAJARA -- "tail_tajara"
+FEATURE_SKRELL_HAIR -- "skrell_hair"
+FEATURE_VOX_HAIR -- "vox_hair"
+
 ### Авторы:
 
-**TheUnknownOne** -- код, работа со спрайтами.
+**TheUnknownOne (aka Tim Ermolt)** -- код, работа со спрайтами;
+**FloweYStyle** -- геймдизайн, помощь с кодом, моральная поддержка.
