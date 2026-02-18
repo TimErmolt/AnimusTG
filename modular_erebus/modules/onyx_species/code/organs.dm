@@ -1,0 +1,121 @@
+/obj/item/organ/brain/tajara
+	name = "tajara brain"
+	desc = "Some folks debate about the existence of these."
+	icon = 'modular_erebus/modules/onyx_species/icons/organs.dmi'
+	icon_state = "brain_tajara"
+	shade_color = "violetish pink"
+
+/obj/item/organ/brain/skrell
+	name = "skrell brain"
+	desc = "It's slimy and kinda uncomfortable. Like skrell are."
+	icon = 'modular_erebus/modules/onyx_species/icons/organs.dmi'
+	icon_state = "brain_skrell"
+	shade_color = "deep blue"
+
+/obj/item/organ/brain/vox
+	name = "vox brain"
+	desc = "Birdbrain! Literally."
+	icon = 'modular_erebus/modules/onyx_species/icons/organs.dmi'
+	icon_state = "brain_vox"
+	shade_color = "bright celadon"
+
+/obj/item/organ/ears/tajara
+	name = "tajara ears"
+	icon = 'modular_erebus/modules/onyx_species/icons/organs.dmi'
+	worn_icon = 'modular_erebus/modules/onyx_species/icons/tajara/tajara_ears.dmi'
+	icon_state = "tajara_ears"
+	sprite_accessory_override = /datum/sprite_accessory/ears/tajara
+
+	dna_block = /datum/dna_block/feature/accessory/ears
+
+	bodypart_overlay = /datum/bodypart_overlay/mutant/tajara_ears
+
+/datum/bodypart_overlay/mutant/tajara_ears
+	feature_key = FEATURE_EARS_TAJARA
+	color_source = ORGAN_COLOR_HAIR
+	dyable = TRUE
+
+/datum/bodypart_overlay/mutant/tajara_ears/can_draw_on_bodypart(obj/item/bodypart/bodypart_owner)
+	return !(bodypart_owner.owner?.obscured_slots & HIDEHAIR)
+
+/obj/item/organ/ears/tajara/cybernetic
+	name = "basic cybernetic tajara ears"
+	icon = 'icons/obj/medical/organs/organs.dmi'
+	icon_state = "ears-c-cat"
+	desc = "A basic cybernetic organ designed to mimic the operation of ears."
+	damage_multiplier = 1.5
+	bodypart_overlay = /datum/bodypart_overlay/mutant/tajara_ears/cybernetic
+	sprite_accessory_override = /datum/sprite_accessory/ears/cat/cybernetic
+	organ_flags = ORGAN_ROBOTIC
+	failing_desc = "seems to be broken."
+
+/obj/item/organ/ears/tajara/cybernetic/upgraded
+	name = "cybernetic tajara ears"
+	icon_state = "ears-c-cat-u"
+	desc = "Cybernetic tajara ears, still less durable than human ears."
+	damage_multiplier = 1
+
+/datum/bodypart_overlay/mutant/tajara_ears/cybernetic
+	feature_key = FEATURE_EARS_TAJARA
+	color_source = null
+	dyable = FALSE
+
+/obj/item/organ/tongue/tajara
+	name = "tajara tongue"
+	desc = "A fleshy, spiky muscle mostly used for licking fur."
+	say_mod = "mrowls"
+	liked_foodtypes = SEAFOOD | RAW
+	disliked_foodtypes = GROSS | GORE | CLOTH
+	organ_traits = list(TRAIT_SPEAKS_CLEARLY, TRAIT_FISH_EATER)
+	languages_native = list(/datum/language/tajara)
+	modifies_speech = TRUE
+	var/static/list/speech_replacements = list(
+		new /regex("r+", "g") = "rrr",
+		new /regex("R+", "g") = "RRR",
+		new /regex("р+", "g") = "ррр",
+		new /regex("Р+", "g") = "РРР",
+	)
+
+/obj/item/organ/tongue/tajara/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/speechmod, replacements = speech_replacements, should_modify_speech = CALLBACK(src, PROC_REF(should_modify_speech)))
+
+/obj/item/organ/eyes/night_vision/tajara
+	name = "tajara eyes"
+	desc = "Feline eyes. They're proficient at seeing in the dark."
+	icon = 'modular_erebus/modules/onyx_species/icons/organs.dmi'
+	icon_state = "eyes_tajara"
+	low_light_cutoff = list(0, 15, 20)
+	medium_light_cutoff = list(0, 20, 35)
+	high_light_cutoff = list(0, 40, 50)
+	pupils_name = "slit pupils"
+	penlight_message = "have vertically slit pupils that contract rapidly"
+
+/obj/item/organ/eyes/skrell
+	name = "skrell eyes"
+	icon = 'modular_erebus/modules/onyx_species/icons/organs.dmi'
+	icon_state = "eyes_skrell"
+	pupils_name = "dark voids"
+	penlight_message = "are totally black with no discernible features"
+
+/obj/item/organ/eyes/vox
+	name = "vox eyes"
+	icon = 'modular_erebus/modules/onyx_species/icons/organs.dmi'
+	icon_state = "eyes_vox"
+	penlight_message = "have small pupils with no scleras"
+
+/obj/item/organ/tail/tajara
+	name = "tajara tail"
+
+	sprite_accessory_override = /datum/sprite_accessory/tails/tajara
+	bodypart_overlay = /datum/bodypart_overlay/mutant/tail/cat
+	restyle_flags = EXTERNAL_RESTYLE_FLESH
+
+	wag_flags = WAG_ABLE
+
+/obj/item/organ/tail/tajara/get_butt_sprite()
+	return icon('icons/mob/butts.dmi', BUTT_SPRITE_CAT)
+
+///Bodypart overlay
+/datum/bodypart_overlay/mutant/tail/tajara
+	feature_key = FEATURE_TAIL_TAJARA

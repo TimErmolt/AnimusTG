@@ -390,6 +390,11 @@ ROUNDSTART_RACES ethereal
 #ROUNDSTART_RACES android
 #ROUNDSTART_RACES golem
 
+## Onyx-added races. Tajaran and Skrell are balance-wise similar to humans. The Vox are more difficult, since they only breathe pure N2.
+ROUNDSTART_RACES tajara
+ROUNDSTART_RACES skrell
+ROUNDSTART_RACES vox
+
 ##-------------------------------------------------------------------------------------------
 
 ## Roundstart no-reset races
