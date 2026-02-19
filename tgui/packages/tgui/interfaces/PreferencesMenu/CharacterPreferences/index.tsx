@@ -100,11 +100,17 @@ export function CharacterPreferenceWindow(props) {
           profiles={data.character_profiles}
         />
       </Stack.Item>
+	  {/*
+	  EREBUS REMOVAL START -- remove membership requirement; PR #6
+
       {!data.content_unlocked && (
         <Stack.Item align="center">
           Buy BYOND premium for more slots!
         </Stack.Item>
       )}
+
+	  EREBUS REMOVAL END -- remove membership requirement; PR #6
+	  */}
       <Stack.Divider />
       <Stack.Item>
         <Stack fill>
