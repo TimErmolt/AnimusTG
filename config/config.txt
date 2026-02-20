@@ -21,6 +21,13 @@ $include map_vote.txt
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
 # SERVERNAME tgstation
 
+## Erebus addition -- discord link for the hub status (hub_status module)
+# DISCORD_LINK https://discord.gg/5BRMMFg
+
+## Erebus addition -- hub status taglines
+# HUB_TAGLINE1 A server
+# HUB_TAGLINE2 Cool server...
+
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
 # SERVERSQLNAME tgstation
 
