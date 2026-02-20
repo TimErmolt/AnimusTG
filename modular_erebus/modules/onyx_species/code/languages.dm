@@ -19,9 +19,9 @@
 
 /datum/language/tajara/get_random_name(
 	gender = NEUTER,
-	name_count = default_name_count,
-	syllable_min = default_name_syllable_min,
-	syllable_max = default_name_syllable_max,
+	name_count = 1,
+	syllable_min = 2,
+	syllable_max = 4,
 	force_use_syllables = FALSE,
 )
 
