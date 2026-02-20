@@ -1,0 +1,4 @@
+author: "TheUnknownOne"
+delete-after: True
+changes:
+  - bugfix: "Причёски и бороды таяр теперь правильно применяются при заходе в раунд."
