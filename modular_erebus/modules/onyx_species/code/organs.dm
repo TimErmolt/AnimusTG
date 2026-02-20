@@ -45,7 +45,6 @@
 	desc = "A basic cybernetic organ designed to mimic the operation of ears."
 	damage_multiplier = 1.5
 	bodypart_overlay = /datum/bodypart_overlay/mutant/cat_ears/tajara_ears/cybernetic
-	sprite_accessory_override = /datum/sprite_accessory/ears/cat/cybernetic
 	organ_flags = ORGAN_ROBOTIC
 	failing_desc = "seems to be broken."
 
@@ -56,6 +55,7 @@
 	damage_multiplier = 1
 
 /datum/bodypart_overlay/mutant/cat_ears/tajara_ears/cybernetic
+	sprite_datum = /datum/sprite_accessory/ears/cat/cybernetic
 	color_source = null
 	dyable = FALSE
 
