@@ -144,21 +144,17 @@
 
 /datum/species/tajara/get_species_lore()
 	return list(
-		"LORE, \
-		AND LORE. \
-		AND LORE AGAIN.",
+		"Tajaran hail from the binary S'rendarr star system. Their homeworld is Adhomai, the smallest \
+		and coldest planet in their star system. Their appearance and anatomy is much similar to humans, \
+		but with distinct thick fur, usually of a gray or brown color, and some feline features, such as eyes and muzzles.",
 
-		"LORE \
-		MORE LORE. \
-		AND LORE ONCE MORE.",
+		"For centuries prior to discovery by mankind, Adhomai was ruled by a caste known only as the Slavers. \
+		Tajaran lived under their oppression. However, once human corporations found Adhomai with its rich \
+		resources, they helped stage a planet-wide revolution, resulting in the Slavers' defeat. \
+		Nowadays, Adhomai is chiefly under the influence of NanoTrasen and various other corporations.",
 
-		"LORE STILL. \
-		LORE'S LEFT; \
-		MUCH LORE TO GAIN.",
-
-		"LORE'S DONE: \
-		TIME FOR, \
-		A LORE ENCORE.",
+		"Due to the long history of their oppression, Tajaran tend to be rather submissive and humble towards their superiors. \
+		However, a tajara may still be a capable worker and, given the circumstances, even a fighter.",
 	)
 
 /datum/species/tajara/create_pref_unique_perks()
