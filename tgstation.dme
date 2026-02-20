@@ -6845,4 +6845,6 @@
 #include "modular_erebus\master_files\code\datums\keybindings\living.dm"
 #include "modular_erebus\master_files\code\datums\keybindings\mob.dm"
 #include "modular_erebus\master_files\code\modules\client\preferences.dm"
+#include "modular_erebus\modules\hub_status\code\configuration.dm"
+#include "modular_erebus\modules\hub_status\code\world.dm"
 // END_INCLUDE
