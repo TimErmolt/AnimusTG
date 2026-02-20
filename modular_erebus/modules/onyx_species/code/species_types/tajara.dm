@@ -14,8 +14,6 @@
 	payday_modifier = 0.9
 	species_language_holder = /datum/language_holder/tajara
 
-	// Mutant organs are temp; will replace with proper tajara variants later
-
 	mutant_organs = list(
 		/obj/item/organ/tail/tajara = "Tajara Tail",
 	)
@@ -26,7 +24,7 @@
 	mutanteyes = /obj/item/organ/eyes/night_vision/tajara
 	meat = /obj/item/food/meat/slab/human/mutant/tajara
 	skinned_type = /obj/item/stack/sheet/animalhide/carbon/tajara
-	exotic_bloodtype = /datum/blood_type/tajara
+	exotic_bloodtype = "T"
 
 	bodypart_overrides = list(
 		BODY_ZONE_HEAD = /obj/item/bodypart/head/tajara,
@@ -37,6 +35,14 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/tajara,
 	)
 
+/datum/species/tajara/New()
+	. = ..()
+	all_hairstyles = SSaccessories.hairstyles_tajara_list
+	male_hairstyles = all_hairstyles
+	female_hairstyles = all_hairstyles
+	all_facial_hairstyles = SSaccessories.facial_hairstyles_tajara_list
+	male_facial_hairstyles = all_facial_hairstyles
+	female_facial_hairstyles = all_facial_hairstyles
 
 /datum/species/tajara/prepare_human_for_preview(mob/living/carbon/human/tajara)
 	tajara.dna.features[FEATURE_MUTANT_COLOR] = "#707070"

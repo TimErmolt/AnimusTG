@@ -124,7 +124,7 @@ export const heterochromatic: Feature<string> = {
   component: FeatureColorInput,
 };
 
-/* EREBUS EDIT ADDITION START */
+/* EREBUS EDIT ADDITION START -- onyx_species */
 
 export const feature_tajara_ears: FeatureChoiced = {
   name: 'Ears',
@@ -144,4 +144,4 @@ export const feature_tajara_tail: FeatureChoiced = {
   },
 };
 
-/* EREBUS EDIT ADDITION END */
+/* EREBUS EDIT ADDITION END -- onyx_species */
