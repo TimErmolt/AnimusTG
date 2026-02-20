@@ -1,7 +1,6 @@
 #define SET_OVERLAY_VALUE(overlay,variable,value) if(overlay) overlay.variable = value
 
 /obj/item/bodypart/head/get_hair_and_lips_icon(dropped)
-	SHOULD_CALL_PARENT(TRUE)
 	RETURN_TYPE(/list)
 	. = list()
 
