@@ -6866,8 +6866,11 @@
 #include "modular_erebus\modules\onyx_species\code\items\leather.dm"
 #include "modular_erebus\modules\onyx_species\code\items\meatslab.dm"
 #include "modular_erebus\modules\onyx_species\code\species_features\dna_features.dm"
+#include "modular_erebus\modules\onyx_species\code\species_features\skrell.dm"
 #include "modular_erebus\modules\onyx_species\code\species_features\sprite_accessories.dm"
 #include "modular_erebus\modules\onyx_species\code\species_features\tajara.dm"
+#include "modular_erebus\modules\onyx_species\code\species_parts\skrell_bodyparts.dm"
 #include "modular_erebus\modules\onyx_species\code\species_parts\tajara_bodyparts.dm"
+#include "modular_erebus\modules\onyx_species\code\species_types\skrell.dm"
 #include "modular_erebus\modules\onyx_species\code\species_types\tajara.dm"
 // END_INCLUDE

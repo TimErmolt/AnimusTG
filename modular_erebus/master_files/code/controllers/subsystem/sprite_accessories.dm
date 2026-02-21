@@ -36,8 +36,6 @@
 
 	feature_list[FEATURE_EARS_TAJARA] = INIT_ACCESSORY(/datum/sprite_accessory/ears/tajara)
 	feature_list[FEATURE_TAIL_TAJARA] = INIT_ACCESSORY(/datum/sprite_accessory/tails/tajara)
-	//feature_list[FEATURE_SKRELL_HAIR] = INIT_ACCESSORY(/datum/sprite_accessory/skrell_hair)
-	//feature_list[FEATURE_VOX_HAIR] = INIT_ACCESSORY(/datum/sprite_accessory/vox_hair)
 
 /// This reads the applicable sprite accessory datum's subtypes and adds it to the subsystem's list of sprite accessories.
 /// The boolean `add_blank` argument just adds a "None" option to the list of sprite accessories, like if a felinid doesn't want a tail or something, typically good for gated-off things.

@@ -62,6 +62,8 @@
 /obj/item/organ/tongue/tajara
 	name = "tajara tongue"
 	desc = "A fleshy, spiky muscle mostly used for licking fur."
+	icon = 'modular_erebus/modules/onyx_species/icons/organs.dmi'
+	icon_state = "tongue_tajara"
 	say_mod = "mrowls"
 	liked_foodtypes = SEAFOOD | RAW
 	disliked_foodtypes = GROSS | GORE | CLOTH
@@ -74,6 +76,25 @@
 		new /regex("р+", "g") = "ррр",
 		new /regex("Р+", "g") = "РРР",
 	)
+
+/obj/item/organ/tongue/skrell
+	name = "skrell tongue"
+	desc = "A slimy muscle mostly used for snobby talking."
+	icon = 'modular_erebus/modules/onyx_species/icons/organs.dmi'
+	icon_state = "tongue_skrell"
+	say_mod = "warbles"
+	liked_foodtypes = VEGETABLES | GRAIN | FRUIT | NUTS
+	disliked_foodtypes = CLOTH | GROSS
+	toxic_foodtypes = TOXIC | GORE | MEAT | ALCOHOL | SEAFOOD | BUGS
+	languages_native = list(/datum/language/skrell)
+
+/obj/item/organ/tongue/vox
+	name = "vox tongue"
+	desc = "A fleshy muscle mostly used for screeching."
+	icon = 'modular_erebus/modules/onyx_species/icons/organs.dmi'
+	icon_state = "tongue_vox"
+	say_mod = "screeches"
+	languages_native = list(/datum/language/vox)
 
 /obj/item/organ/tongue/tajara/Initialize(mapload)
 	. = ..()
